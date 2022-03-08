@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,600;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #fafafa;
+}
+
+.container {
+  width: 1280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0rem 1rem;
+}
+
+.navbar {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar h1 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-right: auto;
+}
+
+.navbar .dark-btn {
+  width: 70px;
+  background-color: #ededed;
+  border-radius: 20px;
+  border: 2px solid black;
+  cursor: pointer;
+  margin: 0 .5rem;
+}
+
+.navbar .dark-btn .circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: black;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.navbar .light--mode-txt {
+  font-weight: bold;
+}
+
+.navbar .dark--mode-txt {
+  font-weight: 100;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form .container {
+  margin-top: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form input {
+  width: 480px;
+  height: 56px;
+  font-size: 14px;
+  font-family: inherit;
+  padding-left: 74px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.form i {
+  position: absolute;
+  padding: 20px 32px;
+  padding-right: 0;
+}
+
+.form .select {
+  width: 201px;
+  height: 56px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border: none;
+  padding-left: 26px;
+  background-color: white;
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 52px;
+}
+
+.card-container .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  padding: 0;
+  justify-items: center;
+}
+
+.card-container .card {
+  width: 265px;
+  height: 335px;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 7px;
+  margin-bottom: 2rem;
+  background-color: white;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-container .card .card-content {
+  margin-left: 22px;
+}
+
+.card-container .card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 265px;
+  height: 159px;
+}
+
+.card-container .card h2 {
+  font-size: 18px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.card-container .card p .text {
+  font-size: 14px;
+  padding-bottom: 7px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 722px) {
+  .form .container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 48px;
+  }
+  .form input {
+    width: 100%;
+  }
+  .card-container .container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .card-container .container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 891px) {
+  .card-container .container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .card-container .container {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.darkBody {
+  background-color: #202c37;
+}
+
+.navbar.darkMode {
+  background-color: #2b3945;
+  color: white;
+}
+
+.navbar.darkMode .dark-btn {
+  background-color: #0c0a0a;
+}
+
+.navbar.darkMode .dark-btn .circle {
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+  background-color: white;
+}
+
+.navbar.darkMode .light--mode-txt {
+  font-weight: 100;
+}
+
+.navbar.darkMode .dark--mode-txt {
+  font-weight: bold;
+}
+
+.form.darkMode input {
+  background-color: #2b3945;
+  color: white;
+}
+
+.form.darkMode select {
+  color: white;
+  background-color: #2b3945;
+}
+
+.card-container.darkMode .card {
+  background-color: #2b3945;
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */
