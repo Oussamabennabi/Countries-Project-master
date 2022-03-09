@@ -1,7 +1,6 @@
 export default function Form(props) {
   const { darkMode } = props
   const addDarkMode = darkMode ? "darkMode" : ""
-  
   return (
     
     <form className={`form ${addDarkMode}`}>

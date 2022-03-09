@@ -16,10 +16,10 @@ export default function CardContainer(props) {
 
     };
     return (
-      <Link  to={`/${name}`}>  
+      <Link  key={name} to={`/detail/${name}`}>  
+      
       <div
           className={`card ${addDarkMode}`}
-          key={population}
       >
         <img className="flag" src={flag} alt={name} />
         <div

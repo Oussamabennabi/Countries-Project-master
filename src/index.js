@@ -33,26 +33,27 @@ function App() {
 
   return (
     <Router>
-    <div
-      className={`body ${darkMode ? "bodyDarkMode": ""}`}>
-      <Navbar
-        darkMode={darkMode}
-        toggleDarkMode={toggleDarkMode}
-      />
-        {/* <Route path="/" element={<Form />} /> */}
-        {/* <Form 
-        darkMode={darkMode}
-      />
-      <CardContainer
+    <div>
+        
+        <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+        
+        <Route path="/" exact>
+        <Form darkMode={darkMode}/>
+        </Route>
+
+        <Route exact path="/">
+          <CardContainer
           darkMode={darkMode}
-          
-        countries={countries}
-        /> */}
-        <Detail/>
-        {/* <Route path="/detail" component={Detail}/> */}
+          countries={countries}
+        /> 
+        </Route>
+        <Route   path="/detail/:countrieName" >
+          <Detail  darkMode={darkMode}/>
+        </Route>
+      
     </div>
     </Router>
   );
 }
 
-ReactDOM.render(<App/>,document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
