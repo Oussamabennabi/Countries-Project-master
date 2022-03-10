@@ -227,6 +227,11 @@ a {
   border-radius: 5px;
 }
 
+.details i {
+  padding-left: -18px;
+  padding-right: 14px;
+}
+
 .details .home-btn {
   margin: 79px 0px;
   padding: 13px 38px;
@@ -419,6 +424,10 @@ a {
 }
 
 .form.darkMode input::placeholder {
+  color: white;
+}
+
+.form.darkMode i {
   color: white;
 }
 

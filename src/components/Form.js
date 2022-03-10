@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import {  useState } from 'react';
 
 export default function Form(props) {
 
-  const { darkMode ,handleSubmit} = props
+  const { darkMode ,handleSubmit,Region} = props
   const addDarkMode = darkMode ? "darkMode" : ""
 
   const [formData, setFormData] = useState({
@@ -24,8 +24,7 @@ export default function Form(props) {
       onSubmit={handleSubmit}
     >
       <div className="container">
-        <i
-          className={`fa-solid fa-magnifying-glass ${addDarkMode}`}></i>
+        <i className={`fa-solid fa-magnifying-glass ${addDarkMode}`}></i>
         <input 
           onChange={onChange}
           value={formData.countrie}
@@ -33,8 +32,9 @@ export default function Form(props) {
           placeholder="Search for a country..." />
         <select
           className={`select ${addDarkMode}`}
-          defaultValue="Filter by Region">
-          {/* <option disabled selected value="Filter by Region">Filter by Region</option> */}
+          onChange={Region}
+        >
+          
           <option value="Africa">Africa</option>
           <option value="America">America</option>
           <option value="Asia">Asia</option>

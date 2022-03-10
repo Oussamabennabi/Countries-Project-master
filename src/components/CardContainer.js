@@ -10,13 +10,9 @@ export default function CardContainer(props) {
   const cardEl = countries.map(countrie => {
 
     const { name, population, region, capital, flag } = countrie;
-    const styles = {
-      color: 'black',
-      textDecoration:'none'
 
-    };
     return (
-      <Link  key={name} to={`/detail/${name}`}>  
+      <Link  key={`${name} ${population}`} to={`/detail/${name}`}>  
       
       <div
           className={`card ${addDarkMode}`}

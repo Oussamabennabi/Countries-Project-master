@@ -146,7 +146,7 @@ a {
 		}
 		p .text {
 			font-size: 14px;
-		text-decoration: none;
+			text-decoration: none;
 			padding-bottom: 7px;
 			font-weight: bold;
 		}
@@ -175,6 +175,10 @@ a {
 		cursor: pointer;
 		padding: 8px 26px;
 		border-radius: 5px;
+	}
+	i {
+		padding-left: -18px;
+		padding-right: 14px;
 	}
 	.home-btn {
 		margin: 79px 0px;
@@ -262,8 +266,6 @@ a {
 	}
 }
 
-
-
 @media screen and(max-width: 1140px) {
 	.details {
 		.countrie-img {
@@ -347,6 +349,9 @@ a {
 		&::placeholder {
 			color: $white;
 		}
+	}
+	i {
+		color: $white;
 	}
 	select {
 		color: $white;

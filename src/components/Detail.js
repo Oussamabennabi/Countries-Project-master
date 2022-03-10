@@ -4,24 +4,21 @@ export default function Details(props){
   const { darkMode } = props
   const addDarkMode = darkMode ? "darkMode" : ""
   const { countrieName } = useParams()
-  const [countrie,setCountrie] = useState([])
+  const [countrie, setCountrie] = useState([])
   const fetchData = async () => {
     fetch(`https://restcountries.com/v2/name/${countrieName}`).then(response => response.json()).then(data => setCountrie(data[0]));
     ;
   };
-
   useEffect(() => {
     fetchData();
-  }, []);
-  
-
-  const {name,nativeName,population,region,subregion,capital,flag,topLevelDomain,languages,currencies} = countrie
+  },[]);
+  const { name, nativeName, population, region, subregion, capital, flag, topLevelDomain} = countrie;
 
   return (
     <div className={`details ${addDarkMode}`}>
       <div className="container countrie-container">
         <Link to="/">
-          <button className="btn home-btn"> Back</button>
+          <button className="btn home-btn"><i className="fa-solid fa-arrow-left"></i> Back</button>
         </Link>  
         <div className="countrie">
         <div className="countrie-img">
@@ -56,11 +53,11 @@ export default function Details(props){
           </p>
           <p>
             <span className="text">Currencies </span>
-            {/* : {currencies[0].code} */}
+            
           </p>
           <p>
             <span className="text">Languages</span>
-            {/* : {languages[0].name} */}
+            : 
           </p>
           </div>
           <div className="border-countries">
