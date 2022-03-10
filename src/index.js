@@ -23,14 +23,29 @@ function App() {
  // ==============================================================
   
   // working with the data :
-
+  
   const [countries, setCountries] = React.useState([]);
+  // set initialaly first 100 countrie . 
+  const fetchCountries = async () => {
+    fetch(`https://restcountries.com/v2/all`).then(resp => resp.json()).then(data => setCountries(data.slice(0,100)));
+  }
+
+  // working with the input .
+  const fetchCountrie = async (value) => {
+    fetch(`https://restcountries.com/v2/name/${value}`).then(resp => resp.json()).then(data=>setCountries(data));
+  }
+  
+  function handleSubmit(e) {
+    e.preventDefault();
+    const { value } = e.target.children[0].children[1];
+
+    fetchCountrie(value);
+  }
   
   React.useEffect(() => {
-    setCountries(Data.slice(0,100));
-
-    },[])
-
+    
+    fetchCountries();
+  },[])
   return (
     <Router>
     <div>
@@ -38,7 +53,10 @@ function App() {
         <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         
         <Route path="/" exact>
-        <Form darkMode={darkMode}/>
+          <Form
+            darkMode={darkMode}
+            handleSubmit={handleSubmit}
+          />
         </Route>
 
         <Route exact path="/">

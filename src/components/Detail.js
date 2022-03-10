@@ -14,14 +14,9 @@ export default function Details(props){
     fetchData();
   }, []);
   
-  console.log(countrie);
+
   const {name,nativeName,population,region,subregion,capital,flag,topLevelDomain,languages,currencies} = countrie
-  // const currencyEl = currencies[0].forEach(currency => {
-  //   // return (<span>{ currency.code}</span>)
-  //   return currency
-  // })
-  // console.log(currencies[0].code)
-  // console.log(flag)
+
   return (
     <div className={`details ${addDarkMode}`}>
       <div className="container countrie-container">

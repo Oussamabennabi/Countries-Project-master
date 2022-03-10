@@ -24,12 +24,10 @@ body {
 .container {
 	width: 1280px;
 	display: flex;
-
 	padding: 0rem 1rem;
 }
 
-// LINK :
-Link {
+a {
 	text-decoration: none;
 }
 //  NAVBAR
@@ -41,7 +39,6 @@ Link {
 	align-items: center;
 	justify-content: center;
 	.container {
-		// justify-content: space-between;
 		align-items: center;
 	}
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -149,56 +146,16 @@ Link {
 		}
 		p .text {
 			font-size: 14px;
+		text-decoration: none;
 			padding-bottom: 7px;
 			font-weight: bold;
 		}
 	}
 }
-
-@media screen and(max-width: 722px) {
-	.form {
-		.container {
-			flex-wrap: wrap;
-			margin-top: 30px;
-			gap: 48px;
-		}
-		input {
-			width: 100%;
-		}
-	}
-
-	.card-container {
-		.container {
-			justify-content: center;
-		}
-	}
-}
-@media screen and (max-width: 1160px) {
-	.card-container {
-		.container {
-			grid-template-columns: repeat(3, 1fr);
-		}
-	}
-}
-@media screen and (max-width: 891px) {
-	.card-container {
-		.container {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-}
-
-@media screen and(max-width:580px) {
-	.card-container {
-		.container {
-			grid-template-columns: repeat(1, 1fr);
-		}
-	}
-}
-
 .details {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 5rem;
 	.countrie-container {
 		align-items: flex-start;
 		flex-direction: column;
@@ -263,6 +220,49 @@ Link {
 		}
 	}
 }
+
+@media screen and(max-width: 722px) {
+	.form {
+		.container {
+			flex-wrap: wrap;
+			margin-top: 30px;
+			gap: 48px;
+		}
+		input {
+			width: 100%;
+		}
+	}
+
+	.card-container {
+		.container {
+			justify-content: center;
+		}
+	}
+}
+@media screen and (max-width: 1160px) {
+	.card-container {
+		.container {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+@media screen and (max-width: 891px) {
+	.card-container {
+		.container {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@media screen and(max-width:580px) {
+	.card-container {
+		.container {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+
+
 
 @media screen and(max-width: 1140px) {
 	.details {

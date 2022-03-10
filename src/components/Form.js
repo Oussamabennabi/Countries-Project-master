@@ -1,13 +1,34 @@
+import { useEffect, useState } from 'react';
+
 export default function Form(props) {
-  const { darkMode } = props
+
+  const { darkMode ,handleSubmit} = props
   const addDarkMode = darkMode ? "darkMode" : ""
+
+  const [formData, setFormData] = useState({
+    countrie: ""
+  });
+
+  function onChange(e) {
+    const { value } = e.target
+    setFormData(prevData => ({
+      ...prevData,
+      countrie : value
+    }))
+  }
+  
   return (
     
-    <form className={`form ${addDarkMode}`}>
+    <form
+      className={`form ${addDarkMode}`}
+      onSubmit={handleSubmit}
+    >
       <div className="container">
         <i
           className={`fa-solid fa-magnifying-glass ${addDarkMode}`}></i>
-        <input
+        <input 
+          onChange={onChange}
+          value={formData.countrie}
           className={addDarkMode}
           placeholder="Search for a country..." />
         <select
