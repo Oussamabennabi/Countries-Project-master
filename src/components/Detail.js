@@ -58,8 +58,6 @@ export default function Details(props) {
     fetchData();
   }, [countrieName]);
 
-  console.log(countrie);
-
   return (
     <div className={`details ${addDarkMode}`}>
       <div className="container countrie-container">
